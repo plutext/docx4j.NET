@@ -7,10 +7,8 @@
     <authors>Jason Harrop and contributors</authors>
     <owners>Plutext Pty Ltd</owners>
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
-    <!--
-      <projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>
-      <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
-    -->
+    <projectUrl>https://github.com/plutext/docx4j.NET</projectUrl>
+    <iconUrl>http://www.docx4java.org/logo-75.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>docx4j is an open source (ASLv2) Java library for docx/pptx/xlsx, similar in concept to Open XML SDK, but with its own particular strengths including content control databinding (with OpenDoPE enhancements), 
     XHTML import/export, PDF output, and MERGEFIELD processing.  This is the .NET version of docx4j. </description>
