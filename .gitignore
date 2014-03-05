@@ -97,8 +97,8 @@ publish/
 *.pubxml
 
 # NuGet Packages Directory
-## TODO: If you have NuGet Package Restore enabled, uncomment the next line
-#packages/
+## as we have NuGet Package Restore enabled, next line is uncommented
+packages/
 
 # Windows Azure Build Output
 csx
