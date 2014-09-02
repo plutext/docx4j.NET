@@ -1,38 +1,51 @@
-<?xml version="1.0"?>
-<package >
-  <metadata>
-    <id>docx4j.NET</id>
-    <version>3.0.1.0</version>
-    <title>docx4j.NET</title>
-    <authors>Jason Harrop and contributors</authors>
-    <owners>Plutext Pty Ltd</owners>
-    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
-    <projectUrl>https://github.com/plutext/docx4j.NET</projectUrl>
-    <iconUrl>http://www.docx4java.org/logo-75.png</iconUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>docx4j is an open source (ASLv2) Java library for docx/pptx/xlsx, similar in concept to Open XML SDK, but with its own particular strengths including content control databinding (with OpenDoPE enhancements), 
-    XHTML import/export, PDF output, and MERGEFIELD processing.  This is the .NET version of docx4j. </description>
-    <releaseNotes>Release based on docx4j 3.0.1, plus...</releaseNotes>
-    <summary>
-      docx4j for .NET, for for docx/pptx/xlsx processing (like Open XML SDK).
-    </summary>
-    <copyright>Copyright Plutext Pty Ltd and contributors</copyright>
-    <tags>docx4j, docx, pptx, xlsx, OpenXML, PDF, HTML, mailmerge, MERGEFIELD, content control data binding</tags>
-    <dependencies>
-      <dependency id="IKVM" version="7.3.4830.0" />
-      <dependency id="slf4j-api" version="1.7.5" />
-      <dependency id="Common.Logging" version="2.1.2" />
-      <dependency id="slf4j-NetCommonLogging" version="1.0.0" />
-      <dependency id="DocumentFormat.OpenXml" version="1.0.0" /> <!-- DocumentFormat.OpenXml -->
-    </dependencies>
-    <frameworkAssemblies>
-      <frameworkAssembly assemblyName="WindowsBase"  />
-    </frameworkAssemblies>
-  </metadata>
-  <files>
-    <file src="lib\net20\docx4j.dll" target="lib\net35\docx4j.dll" />
-    <!--<file src="lib\net35\docx4j.NET.exe" target="lib\net35\docx4j.NET.exe" />-->
-    <file src="lib\net20\docx4j.dll" target="lib\net35\docx4j.dll" />
-    <file src="src\**\*.*" target="Content\src" />
-  </files>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>docx4j.NET</id>
+        <version>3.2.0.1</version>
+        <title>docx4j.NET</title>
+        <authors>Jason Harrop and contributors</authors>
+        <owners>Plutext Pty Ltd</owners>
+        <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+        <projectUrl>https://github.com/plutext/docx4j.NET</projectUrl>
+        <iconUrl>http://www.docx4java.org/logo-75.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>docx4j is an open source (ASLv2) Java library for docx/pptx/xlsx, similar in concept to Open XML SDK, but with its own particular strengths including content control databinding (with OpenDoPE enhancements), 
+    XHTML import/export, PDF output, and MERGEFIELD processing.  This is the .NET version of docx4j.</description>
+        <summary>docx4j for .NET, for docx/pptx/xlsx processing (like Open XML SDK).</summary>
+        <releaseNotes>Release based on docx4j 3.2.0</releaseNotes>
+        <copyright>Copyright Plutext Pty Ltd and contributors</copyright>
+        <tags>docx4j, docx, pptx, xlsx, OpenXML, PDF, HTML, mailmerge, MERGEFIELD, content control data binding</tags>
+        <dependencies>
+            <dependency id="IKVM" version="7.3.4830.0" />
+            <dependency id="slf4j-api" version="1.7.5" />
+            <dependency id="Common.Logging" version="2.1.2" />
+            <dependency id="DocumentFormat.OpenXml" version="1.0.0" />
+            <dependency id="slf4j-NetCommonLogging" version="1.7.5.2" />
+        </dependencies>
+        <frameworkAssemblies>
+            <frameworkAssembly assemblyName="WindowsBase" targetFramework="" />
+        </frameworkAssemblies>
+    </metadata>
+    <files>
+        <file src="Content\src\main\c_sharp\Plutext\Docx4NET\WordprocessingDocumentFactory.cs" target="Content\src\main\c_sharp\Plutext\Docx4NET\WordprocessingDocumentFactory.cs" />
+        <file src="Content\src\main\c_sharp\Plutext\Docx4NET\WordprocessingMLPackageFactory.cs" target="Content\src\main\c_sharp\Plutext\Docx4NET\WordprocessingMLPackageFactory.cs" />
+        <file src="Content\src\main\c_sharp\Plutext\Docx4NET\WordprocessingMLPackageUtils.cs" target="Content\src\main\c_sharp\Plutext\Docx4NET\WordprocessingMLPackageUtils.cs" />
+        <file src="Content\src\main\c_sharp\Plutext\Pptx4NET\PresentationDocumentFactory.cs" target="Content\src\main\c_sharp\Plutext\Pptx4NET\PresentationDocumentFactory.cs" />
+        <file src="Content\src\main\c_sharp\Plutext\Pptx4NET\PresentationMLPackageFactory.cs" target="Content\src\main\c_sharp\Plutext\Pptx4NET\PresentationMLPackageFactory.cs" />
+        <file src="Content\src\main\c_sharp\Plutext\Xlsx4NET\SpreadsheetDocumentFactory.cs" target="Content\src\main\c_sharp\Plutext\Xlsx4NET\SpreadsheetDocumentFactory.cs" />
+        <file src="Content\src\main\c_sharp\Plutext\Xlsx4NET\SpreadsheetMLPackageFactory.cs" target="Content\src\main\c_sharp\Plutext\Xlsx4NET\SpreadsheetMLPackageFactory.cs" />
+        <file src="Content\src\main\c_sharp\Plutext\PropertiesConfigurator.cs" target="Content\src\main\c_sharp\Plutext\PropertiesConfigurator.cs" />
+        <file src="Content\src\main\c_sharp\Plutext\SaveFromJavaUtils.cs" target="Content\src\main\c_sharp\Plutext\SaveFromJavaUtils.cs" />
+        <file src="Content\src\samples\c_sharp\Docx4NET\ContentControlBind.cs" target="Content\src\samples\c_sharp\Docx4NET\ContentControlBind.cs" />
+        <file src="Content\src\samples\c_sharp\Docx4NET\DocxToHTML.cs" target="Content\src\samples\c_sharp\Docx4NET\DocxToHTML.cs" />
+        <file src="Content\src\samples\c_sharp\Docx4NET\DocxToPDF.cs" target="Content\src\samples\c_sharp\Docx4NET\DocxToPDF.cs" />
+        <file src="Content\src\samples\c_sharp\Docx4NET\InteropDocx.cs" target="Content\src\samples\c_sharp\Docx4NET\InteropDocx.cs" />
+        <file src="Content\src\samples\c_sharp\Docx4NET\MailMergeField.cs" target="Content\src\samples\c_sharp\Docx4NET\MailMergeField.cs" />
+        <file src="Content\src\samples\resources\ContentControlBind\binding-simple-data.xml" target="Content\src\samples\resources\ContentControlBind\binding-simple-data.xml" />
+        <file src="Content\src\samples\resources\ContentControlBind\binding-simple.docx" target="Content\src\samples\resources\ContentControlBind\binding-simple.docx" />
+        <file src="Content\src\samples\resources\docx4j.properties" target="Content\src\samples\resources\docx4j.properties" />
+        <file src="Content\src\samples\resources\sample-docx.docx" target="Content\src\samples\resources\sample-docx.docx" />
+        <file src="lib\net20\docx4j.dll" target="lib\net35\docx4j.dll" />
+    </files>
 </package>
