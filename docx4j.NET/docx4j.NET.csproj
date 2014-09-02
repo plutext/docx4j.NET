@@ -34,7 +34,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>docx4j.NET.samples.ContentControlBind</StartupObject>
+    <StartupObject>docx4j.NET.samples.DocxToPDF</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Common.Logging">
@@ -44,7 +44,7 @@
       <Private>True</Private>
       <HintPath>..\packages\DocumentFormat.OpenXml.1.0\lib\DocumentFormat.OpenXml.dll</HintPath>
     </Reference>
-    <Reference Include="docx4j, Version=3.0.1.5, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="docx4j, Version=3.2.0.1, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>lib\net20\docx4j.dll</HintPath>
     </Reference>
@@ -142,19 +142,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="src\main\c#\Plutext\Docx4NET\WordprocessingDocumentFactory.cs" />
-    <Compile Include="src\main\c#\Plutext\Docx4NET\WordprocessingMLPackageFactory.cs" />
-    <Compile Include="src\main\c#\Plutext\Pptx4NET\PresentationDocumentFactory.cs" />
-    <Compile Include="src\main\c#\Plutext\Pptx4NET\PresentationMLPackageFactory.cs" />
-    <Compile Include="src\main\c#\Plutext\PropertiesConfigurator.cs" />
-    <Compile Include="src\main\c#\Plutext\SaveFromJavaUtils.cs" />
-    <Compile Include="src\main\c#\Plutext\Xlsx4NET\SpreadsheetDocumentFactory.cs" />
-    <Compile Include="src\main\c#\Plutext\Xlsx4NET\SpreadsheetMLPackageFactory.cs" />
-    <Compile Include="src\samples\c#\Docx4NET\ContentControlBind.cs" />
-    <Compile Include="src\samples\c#\Docx4NET\DocxToHTML.cs" />
-    <Compile Include="src\samples\c#\Docx4NET\DocxToPDF.cs" />
-    <Compile Include="src\samples\c#\Docx4NET\InteropDocx.cs" />
-    <Compile Include="src\samples\c#\Docx4NET\MailMergeField.cs" />
+    <Compile Include="src\main\c_sharp\Plutext\Docx4NET\WordprocessingDocumentFactory.cs" />
+    <Compile Include="src\main\c_sharp\Plutext\Docx4NET\WordprocessingMLPackageFactory.cs" />
+    <Compile Include="src\main\c_sharp\Plutext\Pptx4NET\PresentationDocumentFactory.cs" />
+    <Compile Include="src\main\c_sharp\Plutext\Pptx4NET\PresentationMLPackageFactory.cs" />
+    <Compile Include="src\main\c_sharp\Plutext\PropertiesConfigurator.cs" />
+    <Compile Include="src\main\c_sharp\Plutext\SaveFromJavaUtils.cs" />
+    <Compile Include="src\main\c_sharp\Plutext\Xlsx4NET\SpreadsheetDocumentFactory.cs" />
+    <Compile Include="src\main\c_sharp\Plutext\Xlsx4NET\SpreadsheetMLPackageFactory.cs" />
+    <Compile Include="src\samples\c_sharp\Docx4NET\ContentControlBind.cs" />
+    <Compile Include="src\samples\c_sharp\Docx4NET\DocxToHTML.cs" />
+    <Compile Include="src\samples\c_sharp\Docx4NET\DocxToPDF.cs" />
+    <Compile Include="src\samples\c_sharp\Docx4NET\InteropDocx.cs" />
+    <Compile Include="src\samples\c_sharp\Docx4NET\MailMergeField.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
