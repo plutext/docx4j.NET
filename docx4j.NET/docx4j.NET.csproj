@@ -40,10 +40,6 @@
     <Reference Include="Common.Logging">
       <HintPath>..\packages\Common.Logging.2.1.2\lib\net35\Common.Logging.dll</HintPath>
     </Reference>
-    <Reference Include="DocumentFormat.OpenXml, Version=2.0.5022.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\DocumentFormat.OpenXml.1.0\lib\DocumentFormat.OpenXml.dll</HintPath>
-    </Reference>
     <Reference Include="docx4j, Version=3.2.0.1, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>lib\net20\docx4j.dll</HintPath>
@@ -142,13 +138,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="src\main\c_sharp\Plutext\Docx4NET\WordprocessingDocumentFactory.cs" />
     <Compile Include="src\main\c_sharp\Plutext\Docx4NET\WordprocessingMLPackageFactory.cs" />
-    <Compile Include="src\main\c_sharp\Plutext\Pptx4NET\PresentationDocumentFactory.cs" />
     <Compile Include="src\main\c_sharp\Plutext\Pptx4NET\PresentationMLPackageFactory.cs" />
     <Compile Include="src\main\c_sharp\Plutext\PropertiesConfigurator.cs" />
     <Compile Include="src\main\c_sharp\Plutext\SaveFromJavaUtils.cs" />
-    <Compile Include="src\main\c_sharp\Plutext\Xlsx4NET\SpreadsheetDocumentFactory.cs" />
     <Compile Include="src\main\c_sharp\Plutext\Xlsx4NET\SpreadsheetMLPackageFactory.cs" />
     <Compile Include="src\samples\c_sharp\Docx4NET\ContentControlBind.cs" />
     <Compile Include="src\samples\c_sharp\Docx4NET\DocxToHTML.cs" />

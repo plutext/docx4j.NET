@@ -5,8 +5,6 @@ using org.docx4j.openpackaging.parts;
 using org.docx4j.openpackaging.parts.WordprocessingML;
 using org.docx4j.wml;
 
-using DocumentFormat.OpenXml.Packaging;
-
 using System.Collections.Specialized;
 using Common.Logging;
 
