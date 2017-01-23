@@ -17,9 +17,11 @@ You can install the NuGet package; see http://www.nuget.org/packages/docx4j.NET/
 ### Samples
 
 Installing the NuGet package will add a dir src to your project; in src/samples you will see sample code for:
-- docx to PDF
+- simple HelloWorld docx
+- docx desensitization/anonymization (so a docx can be sent for tech support without disclosing anything sensitive)
+- ToC updating
+- docx to PDF (in v3.3.x, this uses Plutext's PDF Converter, not docx4j per se)
 - docx to HTML
-- interop with Open XML SDK
 - mail merge (MERGEFIELD processing)
 - content control data binding
 All of those should run out of the box (provided you have set: Project Properties > Startup object)
