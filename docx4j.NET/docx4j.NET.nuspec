@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>docx4j.NET</id>
-        <version>3.3.2.1</version> <!-- https://github.com/plutext/docx4j/tree/docx4j.NET_3.3.2.1 -->
+        <version>3.3.2.81</version> <!-- https://github.com/plutext/docx4j/tree/docx4j.NET_3.3.2.1 -->
         <title>docx4j.NET</title>
         <authors>Jason Harrop and contributors</authors>
         <owners>Plutext Pty Ltd</owners>
@@ -17,34 +17,52 @@
         <copyright>Copyright Plutext Pty Ltd and contributors</copyright>
         <tags>docx4j, docx, pptx, xlsx, OpenXML, PDF, HTML, mailmerge, MERGEFIELD, content control data binding</tags>
         <dependencies>
-            <dependency id="IKVM" version="7.3.4830.0" />
-            <dependency id="slf4j-api" version="1.7.5" />
-            <dependency id="Common.Logging" version="2.1.2" />
-            <dependency id="slf4j-NetCommonLogging" version="1.7.5.2" />
+            <dependency id="IKVM" version="8.1.5717.0" />
+          
+            <!-- in principle, we don't need the below deps at all.  
+            
+                 But currently we're building docx4j.dll with 
+                 <arg value="-reference:dll/slf4j-api.dll" />
+                 instead of having IKVM put slf4j-api in the docx4j dll.
+                 
+                 Is there a reason for that?
+                 
+                 It doesn't hurt to leave things as they are..
+            -->
+            <dependency id="slf4j-api" version="1.7.5.4" />       <!-- 1.7.22 exists; at some point we should upgrade to that.  -->
+            <dependency id="Common.Logging" version="2.1.2" />  <!-- referenced in slf4j-NetCommonLogging build.xml;  v3.3.1 exists -->
+            <dependency id="slf4j-NetCommonLogging" version="1.7.5.4" />
         </dependencies>
+      <!--
         <frameworkAssemblies>
             <frameworkAssembly assemblyName="WindowsBase" targetFramework="" />
         </frameworkAssemblies>
+        -->
     </metadata>
     <files>
-        <file src="Content\src\main\c_sharp\Plutext\Docx4NET\WordprocessingDocumentFactory.cs" target="Content\src\main\c_sharp\Plutext\Docx4NET\WordprocessingDocumentFactory.cs" />
-        <file src="Content\src\main\c_sharp\Plutext\Docx4NET\WordprocessingMLPackageFactory.cs" target="Content\src\main\c_sharp\Plutext\Docx4NET\WordprocessingMLPackageFactory.cs" />
-        <file src="Content\src\main\c_sharp\Plutext\Docx4NET\WordprocessingMLPackageUtils.cs" target="Content\src\main\c_sharp\Plutext\Docx4NET\WordprocessingMLPackageUtils.cs" />
-        <file src="Content\src\main\c_sharp\Plutext\Pptx4NET\PresentationDocumentFactory.cs" target="Content\src\main\c_sharp\Plutext\Pptx4NET\PresentationDocumentFactory.cs" />
-        <file src="Content\src\main\c_sharp\Plutext\Pptx4NET\PresentationMLPackageFactory.cs" target="Content\src\main\c_sharp\Plutext\Pptx4NET\PresentationMLPackageFactory.cs" />
-        <file src="Content\src\main\c_sharp\Plutext\Xlsx4NET\SpreadsheetDocumentFactory.cs" target="Content\src\main\c_sharp\Plutext\Xlsx4NET\SpreadsheetDocumentFactory.cs" />
-        <file src="Content\src\main\c_sharp\Plutext\Xlsx4NET\SpreadsheetMLPackageFactory.cs" target="Content\src\main\c_sharp\Plutext\Xlsx4NET\SpreadsheetMLPackageFactory.cs" />
-        <file src="Content\src\main\c_sharp\Plutext\PropertiesConfigurator.cs" target="Content\src\main\c_sharp\Plutext\PropertiesConfigurator.cs" />
-        <file src="Content\src\main\c_sharp\Plutext\SaveFromJavaUtils.cs" target="Content\src\main\c_sharp\Plutext\SaveFromJavaUtils.cs" />
-        <file src="Content\src\samples\c_sharp\Docx4NET\ContentControlBind.cs" target="Content\src\samples\c_sharp\Docx4NET\ContentControlBind.cs" />
-        <file src="Content\src\samples\c_sharp\Docx4NET\DocxToHTML.cs" target="Content\src\samples\c_sharp\Docx4NET\DocxToHTML.cs" />
-        <file src="Content\src\samples\c_sharp\Docx4NET\DocxToPDF.cs" target="Content\src\samples\c_sharp\Docx4NET\DocxToPDF.cs" />
-        <file src="Content\src\samples\c_sharp\Docx4NET\InteropDocx.cs" target="Content\src\samples\c_sharp\Docx4NET\InteropDocx.cs" />
-        <file src="Content\src\samples\c_sharp\Docx4NET\MailMergeField.cs" target="Content\src\samples\c_sharp\Docx4NET\MailMergeField.cs" />
-        <file src="Content\src\samples\resources\ContentControlBind\binding-simple-data.xml" target="Content\src\samples\resources\ContentControlBind\binding-simple-data.xml" />
-        <file src="Content\src\samples\resources\ContentControlBind\binding-simple.docx" target="Content\src\samples\resources\ContentControlBind\binding-simple.docx" />
-        <file src="Content\src\samples\resources\docx4j.properties" target="Content\src\samples\resources\docx4j.properties" />
-        <file src="Content\src\samples\resources\sample-docx.docx" target="Content\src\samples\resources\sample-docx.docx" />
-        <file src="lib\net20\docx4j.dll" target="lib\net35\docx4j.dll" />
+        <file src="src\main\c_sharp\Plutext\Docx4NET\WordprocessingMLPackageFactory.cs" target="Content\src\main\c_sharp\Plutext\Docx4NET\WordprocessingMLPackageFactory.cs" />
+        <file src="src\main\c_sharp\Plutext\Docx4NET\WordprocessingMLPackageUtils.cs" target="Content\src\main\c_sharp\Plutext\Docx4NET\WordprocessingMLPackageUtils.cs" />
+        <file src="src\main\c_sharp\Plutext\Pptx4NET\PresentationMLPackageFactory.cs" target="Content\src\main\c_sharp\Plutext\Pptx4NET\PresentationMLPackageFactory.cs" />
+        <file src="src\main\c_sharp\Plutext\Xlsx4NET\SpreadsheetMLPackageFactory.cs" target="Content\src\main\c_sharp\Plutext\Xlsx4NET\SpreadsheetMLPackageFactory.cs" />
+        <file src="src\main\c_sharp\Plutext\PropertiesConfigurator.cs" target="Content\src\main\c_sharp\Plutext\PropertiesConfigurator.cs" />
+        <file src="src\main\c_sharp\Plutext\SaveFromJavaUtils.cs" target="Content\src\main\c_sharp\Plutext\SaveFromJavaUtils.cs" />
+        <file src="src\samples\c_sharp\Docx4NET\ContentControlBind.cs" target="Content\src\samples\c_sharp\Docx4NET\ContentControlBind.cs" />
+        <file src="src\samples\c_sharp\Docx4NET\DocxToHTML.cs" target="Content\src\samples\c_sharp\Docx4NET\DocxToHTML.cs" />
+      
+        <file src="src\samples\c_sharp\Docx4NET\DocxToPDF\DocxToPDF.cs" target="Content\src\samples\c_sharp\Docx4NET\DocxToPDF\DocxToPDF.cs" />
+        <file src="src\samples\c_sharp\Docx4NET\DocxToPDF\Converter.cs" target="Content\src\samples\c_sharp\Docx4NET\DocxToPDF\Converter.cs" />
+        <file src="src\samples\c_sharp\Docx4NET\DocxToPDF\ConversionException.cs" target="Content\src\samples\c_sharp\Docx4NET\DocxToPDF\ConversionException.cs" />
+
+        <file src="src\samples\c_sharp\Docx4NET\Desensitize.cs" target="Content\src\samples\c_sharp\Docx4NET\Desensitize.cs" />
+        <file src="src\samples\c_sharp\Docx4NET\TocUpdate.cs" target="Content\src\samples\c_sharp\Docx4NET\TocUpdate.cs" />
+
+        <file src="src\samples\c_sharp\Docx4NET\MailMergeField.cs" target="Content\src\samples\c_sharp\Docx4NET\MailMergeField.cs" />
+        <file src="src\samples\resources\ContentControlBind\binding-simple-data.xml" target="Content\src\samples\resources\ContentControlBind\binding-simple-data.xml" />
+        <file src="src\samples\resources\ContentControlBind\binding-simple.docx" target="Content\src\samples\resources\ContentControlBind\binding-simple.docx" />
+        <file src="src\samples\resources\sample-docx.docx" target="Content\src\samples\resources\sample-docx.docx" />
+
+        <file src="src\samples\resources\docx4j.properties" target="Content\src\samples\resources\docx4j.properties" />
+
+        <file src="lib\net35\docx4j.dll" target="lib\net35\docx4j.dll" />
     </files>
 </package>

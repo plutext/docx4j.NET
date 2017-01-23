@@ -33,7 +33,7 @@ namespace docx4j.NET.samples
                 Environment.CurrentDirectory.ToString()).ToString()).ToString() + "\\";
 
             string fileIN = projectDir + @"src\samples\resources\sample-docx.docx";
-            string fileOUT = projectDir + @"OUT_sample-docx.pdf";
+            string fileOUT = projectDir + @"OUT\sample-docx.pdf";
 
             Console.WriteLine(fileIN);
 
