@@ -30,9 +30,9 @@ namespace docx4j.NET.samples
         static ILog clog;
         static void Main(string[] args)
         {
-
             // set up logging
-            configureLogging();
+            clog = LoggingConfigurator.configureLogging();
+            clog.Info("Hello from Common Logging");
 
             // create a dir to save the output docx
             string projectDir = System.IO.Directory.GetParent(
@@ -78,36 +78,6 @@ namespace docx4j.NET.samples
             // save result to file
             Docx4J.save(pkg, new java.io.File(fileOUT));
             clog.Info("\n\n saved " + fileOUT + "\n\n");
-        }
-
-        static void configureLogging()
-        {
-            ikvm.runtime.Startup.addBootClassPathAssembly(
-                System.Reflection.Assembly.GetAssembly(
-                    typeof(org.slf4j.impl.StaticLoggerBinder)));
-
-            ikvm.runtime.Startup.addBootClassPathAssembly(
-                System.Reflection.Assembly.GetAssembly(
-                    typeof(org.slf4j.LoggerFactory)));
-
-            NameValueCollection commonLoggingproperties = new NameValueCollection();
-            commonLoggingproperties["showDateTime"] = "false";
-            commonLoggingproperties["level"] = "INFO";
-
-            Common.Logging.LogManager.Adapter = new Common.Logging.Simple.ConsoleOutLoggerFactoryAdapter(commonLoggingproperties);
-            // In VS 2010 for output type console application, that shows up in a new console window,
-            // whether you start with debugging, or without.
-
-            //Common.Logging.LogManager.Adapter = new Common.Logging.Simple.TraceLoggerFactoryAdapter(commonLoggingproperties);
-            // In VS 2010 for output type console application, that shows up in a "show output from debugging",
-            // provided you are debugging!
-
-            // In a real application, you might route Common.Logging to NLog
-            // Common.Logging.LogManager.Adapter = new Common.Logging.NLog.NLogLoggerFactoryAdapter(commonLoggingproperties);
-
-            clog = Common.Logging.LogManager.GetCurrentClassLogger();
-            clog.Info("Hello from Common Logging");
-
         }
 
     }

@@ -27,6 +27,9 @@ namespace docx4j.NET.samples
     {
         static void Main(string[] args)
         {
+            // set up logging
+            clog = LoggingConfigurator.configureLogging();
+            clog.Info("Hello from Common Logging");
 
             string projectDir = System.IO.Directory.GetParent(
                 System.IO.Directory.GetParent(
@@ -41,22 +44,6 @@ namespace docx4j.NET.samples
             System.IO.Directory.CreateDirectory(imageDirPath);
 
             string imageTargetUri = imageDirPath;
-
-            // Programmatically configure Common Logging
-            // (alternatively, you could do it declaratively in app.config)
-            NameValueCollection commonLoggingproperties = new NameValueCollection();
-            commonLoggingproperties["showDateTime"] = "false";
-            commonLoggingproperties["level"] = "INFO";
-            LogManager.Adapter = new Common.Logging.Simple.ConsoleOutLoggerFactoryAdapter(commonLoggingproperties);
-
-
-            ILog log = LogManager.GetCurrentClassLogger();
-            log.Info("Hello from Common Logging" );
-
-            // Necessary, if slf4j-api and slf4j-NetCommonLogging are separate DLLs
-            ikvm.runtime.Startup.addBootClassPathAssembly(
-                System.Reflection.Assembly.GetAssembly(
-                    typeof(org.slf4j.impl.StaticLoggerBinder)));
 
             // Configure to find docx4j.properties
             // .. add as URL the dir containing docx4j.properties (not the file itself!)

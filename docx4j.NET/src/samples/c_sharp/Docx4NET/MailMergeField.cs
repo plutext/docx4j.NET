@@ -26,6 +26,10 @@ namespace docx4j.NET.samples
 
         static void Main(string[] args)
         {
+            // set up logging
+            ILog clog = LoggingConfigurator.configureLogging();
+            clog.Info("Hello from Common Logging");
+
             bool mergedOutput = true;
 
             string projectDir = System.IO.Directory.GetParent(
@@ -33,22 +37,6 @@ namespace docx4j.NET.samples
                 Environment.CurrentDirectory.ToString()).ToString()).ToString() + "\\";
 
             string saveToPathPrefix = projectDir + @"OUT_MailMergeField";
-
-            // Programmatically configure Common Logging
-            // (alternatively, you could do it declaratively in app.config)
-            NameValueCollection commonLoggingproperties = new NameValueCollection();
-            commonLoggingproperties["showDateTime"] = "false";
-            commonLoggingproperties["level"] = "INFO";
-            LogManager.Adapter = new Common.Logging.Simple.ConsoleOutLoggerFactoryAdapter(commonLoggingproperties);
-
-
-            ILog log = LogManager.GetCurrentClassLogger();
-            log.Info("Hello from Common Logging");
-
-            // Necessary, if slf4j-api and slf4j-NetCommonLogging are separate DLLs
-            ikvm.runtime.Startup.addBootClassPathAssembly(
-                System.Reflection.Assembly.GetAssembly(
-                    typeof(org.slf4j.impl.StaticLoggerBinder)));
 
             // Configure to find docx4j.properties
             // .. add as URL the dir containing docx4j.properties (not the file itself!)
