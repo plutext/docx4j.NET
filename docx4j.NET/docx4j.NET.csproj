@@ -34,7 +34,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>docx4j.NET.samples.Desensitize</StartupObject>
+    <StartupObject>docx4j.NET.samples.HelloWorldDocx</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Common.Logging">
@@ -43,9 +43,9 @@
     <Reference Include="Common.Logging.Core">
       <HintPath>..\packages\Common.Logging.Core.3.3.1\lib\net35\Common.Logging.Core.dll</HintPath>
     </Reference>
-    <Reference Include="docx4j, Version=3.3.2.8, Culture=neutral, PublicKeyToken=caeb68ac682d6c33, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="docx4j, Version=6.0.1.81, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>lib\net35\docx4j.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="IKVM.AWT.WinForms">
       <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.AWT.WinForms.dll</HintPath>

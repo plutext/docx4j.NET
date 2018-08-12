@@ -13,6 +13,7 @@ namespace com.plutext.conversion
 
         /**
          * Constructor which uses endpoint: "http://127.0.0.1:9016/v1/00000000-0000-0000-0000-000000000000/convert"; 
+         * First you'll need to download/install, from https://converter-eval.plutext.com/
          */
         public Converter()
         {

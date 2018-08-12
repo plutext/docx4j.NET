@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>docx4j.NET</id>
-        <version>3.3.2.81</version> <!-- https://github.com/plutext/docx4j/tree/docx4j.NET_3.3.2.1 -->
+        <version>6.0.1</version> <!-- https://github.com/plutext/docx4j/tree/docx4j.NET_3.3.2.1 -->
         <title>docx4j.NET</title>
         <authors>Jason Harrop and contributors</authors>
         <owners>Plutext Pty Ltd</owners>
@@ -13,7 +13,7 @@
         <description>docx4j is an open source (ASLv2) Java library for docx/pptx/xlsx, similar in concept to Open XML SDK, but with its own particular strengths including content control databinding (with OpenDoPE enhancements), 
     XHTML import/export, PDF output, and MERGEFIELD processing.  This is the .NET version of docx4j.</description>
         <summary>docx4j for .NET, for docx/pptx/xlsx processing (like Open XML SDK).</summary>
-        <releaseNotes>Release based on docx4j 3.3.2 plus later fixes:  https://github.com/plutext/docx4j/tree/docx4j.NET_3.3.2.1</releaseNotes>
+        <releaseNotes>Release based on docx4j 6.0.1</releaseNotes>
         <copyright>Copyright Plutext Pty Ltd and contributors</copyright>
         <tags>docx4j, docx, pptx, xlsx, OpenXML, PDF, HTML, mailmerge, MERGEFIELD, content control data binding</tags>
         <dependencies>
