@@ -43,9 +43,9 @@
     <Reference Include="Common.Logging.Core">
       <HintPath>..\packages\Common.Logging.Core.3.3.1\lib\net35\Common.Logging.Core.dll</HintPath>
     </Reference>
-    <Reference Include="docx4j, Version=6.0.1.81, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>lib\net35\docx4j.dll</HintPath>
+    <Reference Include="docx4j, Version=6.0.1.83, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\net35\docx4j.dll</HintPath>
     </Reference>
     <Reference Include="IKVM.AWT.WinForms">
       <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.AWT.WinForms.dll</HintPath>
@@ -132,10 +132,10 @@
       <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.Runtime.JNI.dll</HintPath>
     </Reference>
     <Reference Include="slf4j-api">
-      <HintPath>..\..\..\..\..\..\git\slf4j-net-commons-logging\dotNET\lib\net35\slf4j-api.dll</HintPath>
+      <HintPath>..\packages\slf4j-api.1.7.5.4\lib\net35\slf4j-api.dll</HintPath>
     </Reference>
     <Reference Include="slf4j-NetCommonLogging">
-      <HintPath>..\..\..\..\..\..\git\slf4j-net-commons-logging\dotNET\lib\net35\slf4j-NetCommonLogging.dll</HintPath>
+      <HintPath>..\packages\slf4j-NetCommonLogging.1.7.5.4\lib\net35\slf4j-NetCommonLogging.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -162,12 +162,17 @@
     <Compile Include="src\samples\c_sharp\Docx4NET\DocxToPDF\Converter.cs" />
     <Compile Include="src\samples\c_sharp\Docx4NET\DocxToPDF\DocxToPDF.cs" />
     <Compile Include="src\samples\c_sharp\Docx4NET\HelloWorldDocx.cs" />
+    <Compile Include="src\samples\c_sharp\Docx4NET\LoggingConfigurator.cs" />
     <Compile Include="src\samples\c_sharp\Docx4NET\MailMergeField.cs" />
     <Compile Include="src\samples\c_sharp\Docx4NET\TocUpdate.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
-    <None Include="packages.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="src\samples\resources\docx4j.properties" />
   </ItemGroup>
   <ItemGroup />

@@ -24,10 +24,11 @@ namespace docx4j.NET.samples
     {
         static org.docx4j.wml.ObjectFactory wmlObjectFactory = new org.docx4j.wml.ObjectFactory();
 
+        static ILog clog;
         static void Main(string[] args)
         {
             // set up logging
-            ILog clog = LoggingConfigurator.configureLogging();
+            clog = LoggingConfigurator.configureLogging();
             clog.Info("Hello from Common Logging");
 
             bool mergedOutput = true;
@@ -120,7 +121,7 @@ namespace docx4j.NET.samples
                 SaveFromJavaUtils.save(wordMLPackage, saveToPathPrefix +  "_" + i + ".docx");
             }			
 		}
-        log.Info("Done! Saved to " + saveToPathPrefix);
+        clog.Info("Done! Saved to " + saveToPathPrefix);
 
         }
 

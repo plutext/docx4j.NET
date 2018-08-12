@@ -24,6 +24,7 @@ namespace docx4j.NET.samples
     /// </summary>
     class ContentControlBind
     {
+        static ILog clog;
         static void Main(string[] args)
         {
 
@@ -70,7 +71,7 @@ namespace docx4j.NET.samples
 		
 		    //Save the document 
 		    Docx4J.save(wordMLPackage, new java.io.File(OUTPUT_DOCX), Docx4J.FLAG_NONE);
-		    log.Info("Saved: " + OUTPUT_DOCX);
+		    clog.Info("Saved: " + OUTPUT_DOCX);
 
         }
 

@@ -25,6 +25,7 @@ namespace docx4j.NET.samples
     /// </summary>
     class DocxToHTML
     {
+        static ILog clog;
         static void Main(string[] args)
         {
             // set up logging
